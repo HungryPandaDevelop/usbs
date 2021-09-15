@@ -66,9 +66,13 @@
 
 /*--------------------main-page-start----*/
 
-/*--section-1--*/
-@import "sourse/main-page/_section-1.scss";
-/*--section-1--*/
+/*--section-1-poster-*/
+@import "sourse/main-page/_poster.scss";
+/*--section-1-poster-*/
+
+/*--section-2-cabinet_banners-*/
+@import "sourse/main-page/_cabinet_banners.scss";
+/*--section-2-cabinet_banners-*/
 
 
 /*--------------------main-page-end----*/
