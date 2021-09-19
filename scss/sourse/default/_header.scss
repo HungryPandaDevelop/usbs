@@ -26,6 +26,8 @@ header {
   }
 
   nav {
+    font-family: "bold";
+
     li {
       margin-right: 30px;
     }
@@ -49,11 +51,11 @@ header {
       margin-left: 30px;
     }
   }
+
 }
 
 nav {
   display: flex;
-  font-family: "bold";
 
   ul,
   li {
