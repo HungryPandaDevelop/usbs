@@ -1,22 +1,127 @@
 .goods-item {
   grid-column: span 2;
 
+  border: 1px solid $greenColor;
+  padding: 15px;
+
   h3 {
     font-size: inherit;
     margin: 0 0 30px;
   }
+
+
 }
 
+
 .goods-list-img {
+  position: relative;
+
   img {
     width: 100%;
   }
 }
 
-.goods-list-grade {
+
+.goods-list-check {
+  max-width: none;
+  border-radius: 0;
+  color: $whiteColor;
+}
+
+.goods-list-price {
+  font-size: $mediumSize;
+  color: $blackColor;
+  padding: 15px 0;
+}
+
+.goods-buy {
+  background-color: $grayColorSecond;
   display: flex;
   justify-content: space-between;
-  margin: 0 0 30px;
+  margin: 0 -15px 30px;
+
+  .goods-controls {
+    justify-content: space-between;
+    padding: 5px 15px;
+  }
+
+  .goods-plus {
+    @include icoEl(30px, 30px, "../images/controls/plus.svg");
+  }
+
+  .goods-minus {
+    @include icoEl(30px, 30px, "../images/controls/minus.svg");
+  }
+
+  .goods-controls,
+  .btn {
+    width: 50%;
+  }
+
+  .btn {
+    border-radius: 0;
+    border: 0;
+    color: $whiteColor;
+    background-color: $greenColor;
+  }
+}
+
+.goods-list-info {
+  border-top: 1px solid $greenColor;
+  margin: 0 -15px;
+  padding: 5px 15px 0;
+
+  .info-line {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    font-size: $smallSize;
+  }
+}
+
+/*list-item*/
+
+.list-item {
+  &:hover {
+    .list-offer {
+      span {
+        left: 0;
+      }
+    }
+  }
+}
+
+.list-offer {
+  position: absolute;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+
+  span {
+    display: block;
+    left: 100%;
+    position: relative;
+    padding: 5px 10px;
+    color: $whiteColor;
+    background-color: $blueColor;
+    transition: ease-out 0.25s;
+  }
+
+  em {
+    @include positionElement(0, 0, 0, 0, right);
+    border-style: solid;
+    border-width: 14px;
+    border-color: $blueColor $blueColor transparent transparent;
+  }
+}
+
+/*list-item*/
+
+/*item-grade / товары / акции / салоны / косметологи*/
+.item-grade {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 15px;
   color: $blackColor;
 }
 
@@ -27,8 +132,4 @@
   }
 }
 
-.goods-list-check {
-  max-width: none;
-  border-radius: 0;
-  color: $whiteColor;
-}
+/*item-grade*/

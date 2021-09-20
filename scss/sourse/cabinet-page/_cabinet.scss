@@ -1,0 +1,97 @@
+/*.cabinet-sidebar start*/
+.cabinet-head {
+  grid-column: span 10;
+}
+
+.cabinet-body {
+  grid-column: 1/span 10;
+  grid-row: 2;
+}
+
+.cabinet-sidebar {
+  grid-column: 11/span 2;
+  grid-row: 1;
+
+  h2 {
+    text-align: right;
+    margin: 0 0 30px;
+    font-size: $largeSize;
+  }
+
+  h3 {
+    background-color: $blackColor;
+    color: $whiteColor;
+    padding: 11px 10px;
+    position: relative;
+    margin: 0 0 15px;
+
+    i {
+      @include positionElement(10px, 14px, 0, 50%, right);
+      margin-top: -5px;
+      margin-right: 15px;
+      @include bgImageEl("../images/controls/arrow-down-mini-white.svg");
+    }
+  }
+
+  li {
+    margin: 0 0 15px;
+  }
+
+  a {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $whiteColor;
+
+    &:hover {
+      border-bottom: 1px solid $blackColor;
+      color: $blackColor;
+    }
+  }
+}
+
+/*.cabinet-sidebar end*/
+.cabinet-head {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 30px;
+}
+
+.cabinet-fill {
+  grid-column: span 10;
+}
+
+.cabinet-line {
+  border-top: 1px solid;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+
+  .cabinet-num,
+  h3 {
+    font-size: $largeSize;
+    color: $blackColor;
+    font-family: inherit;
+    margin: 0 0 30px;
+
+    em {
+      font-style: normal;
+
+    }
+  }
+
+  .cabinet-num {
+    grid-column: span 2;
+  }
+
+  input {
+    margin: 0 0 30px;
+  }
+
+  .file-decorate {
+    margin: 0 0 15px;
+  }
+
+  .input-file {
+    margin: 0;
+  }
+}

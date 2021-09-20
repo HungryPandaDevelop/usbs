@@ -10,7 +10,7 @@ $(document).ready(function () {
  		// img cover file start
 
     // style input file start
-    let tempFile = $("<div class='file-decorate'><span class='btn'>Выберете файл...</span><i></i></div>");
+    let tempFile = $("<div class='file-decorate'><span>Выберете файл...</span><i></i></div>");
 
     let ObjfieldFile = $('.input-file');
 
@@ -31,7 +31,7 @@ $(document).ready(function () {
             $(this).next().addClass("full");
             if (flagFileMulti == 1) {
                 $(this).next().after(ObjfieldFile.clone().val(""));
-                tempFile = $("<div class='file-decorate'><span class='btn'>Выберете файл...</span><i></i></div>");
+                tempFile = $("<div class='file-decorate'><span>Выберете файл...</span><i></i></div>");
                 $(this).next().next().after(tempFile.clone());
             }
         }

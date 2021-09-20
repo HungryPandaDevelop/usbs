@@ -3,8 +3,9 @@
 	input:not(.btn),
 	textarea,
 	.custom-select {
-		padding: 4px 10px 5px;
+		padding: 4px 0px 5px;
 		border: 0;
+		border-top: 1px solid $blackColor;
 		font: inherit;
 		resize: none;
 		width: 100%;
@@ -28,24 +29,38 @@
 }
 
 /*-file-upload-*/
+$heightContainerFile: 20px;
 
 .input-file {
-	height: 30px;
+	height: $heightContainerFile;
 	visibility: hidden;
+	position: absolute;
 }
 
 .file-decorate {
-	height: 30px;
+	height: $heightContainerFile;
 	position: relative;
-	margin-top: -30px;
+	margin-top: -$heightContainerFile;
 	margin-bottom: 15px;
+	cursor: pointer;
 
-	span {}
+	span {
+		padding-left: 25px;
+		position: relative;
+		display: inline-block;
+
+		&::before {
+			content: "";
+			@include positionElement(15px, 15px, 0, 0);
+			@include bgImageEl("../images/controls/arrow-next-gray.svg");
+		}
+
+
+	}
 
 	i {
-		@include positionElement(15px, 15px, 0, 0, right, top, 2, none);
-		margin: 7px;
-		@include bgImageEl("../images/close-b.png");
+		@include positionElement(12px, 12px, 0, 2px, right, top, 2, none);
+		@include bgImageEl("../images/controls/close-black.svg");
 		cursor: pointer;
 	}
 
@@ -62,6 +77,7 @@
 .custom-select {
 	cursor: pointer;
 	position: relative;
+	border-top: 1px solid $blackColor;
 
 	ul {
 
@@ -77,7 +93,7 @@
 		border-top: 0;
 
 		li {
-			padding: 4px 10px 5px;
+			padding: 4px 0px 5px;
 			cursor: pointer;
 			transition: ease-out 0.5s;
 
