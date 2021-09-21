@@ -10,46 +10,61 @@ $(document).ready(function () {
  		// img cover file start
 
     // style input file start
-    let tempFile = $("<div class='file-decorate'><span>Выберете файл...</span><i></i></div>");
 
     let ObjfieldFile = $('.input-file');
-
-    let flagFileMulti = 1;
-
+    let flagFileMulti;
+    let textChoise;
     
-    $('.input-file').after(tempFile);
+    
+    function createNewFileContainer(textChoiseParam, flagFileMultiParam){
+        let fileContainer = $('<div class="file-input-container" data-flagM="'+flagFileMulti+'"><input class="input-file" type="file"></div>')
+        let noticeFile = $('<div class="notice-file notice-big-file"><span>Файл слишком большой</span><i></i></div>');
+        let docorateFile = $('<div class="file-decorate"><span>'+textChoiseParam+'</span><i></i></div>');
+        return fileContainer.append(docorateFile).append(noticeFile);
+    }
 
-    $('body').on('click', '.file-decorate span', function () {
-        $(this).parent().prev().trigger('click');
+    ObjfieldFile.each(function(){
+        textChoise = $(this).data('textchoise');
+        flagFileMulti = $(this).data('multy');
+        $(this).replaceWith(createNewFileContainer(textChoise, flagFileMulti));
+    });
+
+
+
+    $('body').on('click', '.file-decorate', function () {
+        $(this).prev().trigger('click');
     });
 
     $('body').on('change', '.input-file', function () {
-			console.log($(this).val());
         let nameFile = $(this).val().replace(/C:\\fakepath\\/i, '');
+        
         if (nameFile.length > 0) {
             $(this).next().find("span").text(nameFile);
             $(this).next().addClass("full");
+
             if (flagFileMulti == 1) {
+
                 $(this).next().after(ObjfieldFile.clone().val(""));
-                tempFile = $("<div class='file-decorate'><span>Выберете файл...</span><i></i></div>");
+
+                getPasteTextDecorate(textChoise);
+
+                $(this).before(noticeFile);
                 $(this).next().next().after(tempFile.clone());
             }
         }
     });
 
-    $("body").on("click", ".file-decorate i", function (e) {
-        e.stopPropagation();
-        let choiseParent = $(this).parents(".file-decorate");
-        if (flagFileMulti == 1) {
-            choiseParent.prev().remove();
-            choiseParent.remove();
-        } else {
-            choiseParent.prev().val("");
-            choiseParent.find("span").text("Выберете файл...");
-        }
-
-
-    });
+    // $("body").on("click", ".file-decorate i", function (e) {
+    //     e.stopPropagation();
+    //     let choiseParent = $(this).parents(".file-decorate");
+    //     if (flagFileMulti == 1) {
+    //         choiseParent.prev().remove();
+    //         choiseParent.remove();
+    //     } else {
+    //         choiseParent.prev().val("");
+    //         choiseParent.find("span").text("Выберете файл...");
+    //     }
+    // });
     // style input file end
     // check email
     var r = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;

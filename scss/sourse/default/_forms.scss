@@ -31,17 +31,23 @@
 /*-file-upload-*/
 $heightContainerFile: 20px;
 
+.file-input-container {
+	position: relative;
+
+}
+
 .input-file {
 	height: $heightContainerFile;
 	visibility: hidden;
 	position: absolute;
+	margin-top: -$heightContainerFile;
 }
 
 .file-decorate {
 	height: $heightContainerFile;
 	position: relative;
-	margin-top: -$heightContainerFile;
-	margin-bottom: 15px;
+
+
 	cursor: pointer;
 
 	span {
@@ -66,6 +72,17 @@ $heightContainerFile: 20px;
 
 	&.full i {
 		display: block;
+	}
+}
+
+.notice-file {
+	position: absolute;
+	right: 0;
+
+
+	i {
+		@include icoEl(30px, 30px, "../images/icons/danger-sign-black.svg");
+		margin-left: 15px;
 	}
 }
 
@@ -140,8 +157,8 @@ $heightContainerFile: 20px;
 	margin-bottom: 12px;
 	cursor: pointer;
 	user-select: none;
-
 	padding-top: 5px;
+	border-top: 1px solid;
 
 
 	input {
@@ -157,17 +174,40 @@ $heightContainerFile: 20px;
 	}
 
 	span {
-		@include positionElement(20px, 20px, 0, 6px);
-		border: 1px solid $whiteColor;
+		@include positionElement(15px, 15px, 0, 6px);
+		border: 1px solid $blackColor;
 		border-radius: 100%;
+
 
 		&:after {
 			content: "";
 
-			@include positionElement(8px, 8px, 5px, 5px, left, top, auto, none);
-			background: $whiteColor;
+			@include positionElement(7px, 7px, 3px, 3px, left, top, auto, none);
+			background: $blackColor;
 			border-radius: 100%;
 		}
+	}
+}
+
+
+.checkbox-grid {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-gap: 15px;
+
+	.checkbox-micro {
+		font-size: $smallSize;
+	}
+
+	p,
+	.file-input-container,
+	input,
+	label {
+		grid-column: span 12;
+	}
+
+	.field-half {
+		grid-column: span 6;
 	}
 }
 

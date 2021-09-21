@@ -124,3 +124,35 @@ $gridCount: 12;
 		}
 	}
 }
+
+.content-head-area {
+	grid-column: span 12;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 0 30px;
+
+	a {
+		text-decoration: none;
+
+		&:hover {
+			color: $blackColor;
+			text-decoration: underline;
+		}
+	}
+
+	.btn-group {
+		display: inline-block;
+	}
+}
+
+.breadcrumbs {
+	display: inline-block;
+}
+
+.content-body-area {
+	grid-column: span 10;
+}
+
+.content-sidebar-area {
+	grid-column: span 2;
+}

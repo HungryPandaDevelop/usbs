@@ -184,7 +184,7 @@
     </header>
     <div class="stub"></div>
     <!-- header-->
-    <!-- cabinet-page start-->
+    <!-- login-page start-->
     <div class="content-grid main-grid">
       <div class="content-head-area">
         <div class="btn-group"><a class="back-btn" href="#"><i> </i><span>Вернуться</span></a></div>
@@ -192,73 +192,80 @@
       </div>
       <div class="content-body-area">
         <div class="cabinet-head">
-          <h1>Кабинет</h1>
-          <div class="btn-group"> <a class="btn" href="#">Профиль</a></div>
+          <h1>Регистрация</h1>
         </div>
-        <div class="cabinet-body">
+        <form class="cabinet-body form authorization-form">
           <div class="cabinet-line">
             <div class="cabinet-num">01</div>
             <div class="cabinet-fill">
-              <h3> <em>Наименование вашего салона</em><span>*</span></h3>
-              <div class="cabinet-filed">
-                <form class="form">
-                  <input type="text" placeholder="| Введите наименование вашего салона или сети салонов ">
-                </form>
-              </div>
-              <div class="cabinet-filed">
-                <form class="form"> </form>
-                <input class="input-file" type="file">
-              </div>
-              <div class="cabinet-filed">
-                <form class="form"> </form>
-                <select class="style-select">
-                  <option> one
-                  </option>
-                  <option> two
-                  </option>
-                  <option> three
-                  </option>
-                  <option> four
-                  </option>
-                  <option> five
-                  </option>
-                  <option> six
-                  </option>
-                  <option> sevent
-                  </option>
-                  <option> eight
-                  </option>
-                  <option> nine
-                  </option>
-                  <option> ten
-                  </option>
-                </select>
+              <h3> <em>Ваша профильная деятельность</em></h3>
+              <div class="cabinet-filed checkbox-grid">
+                <label class="checkbox field-half">Производитель / Дистрибьютор
+                  <input type="checkbox"><span></span>
+                </label>
+                <label class="checkbox field-half">Салон
+                  <input type="checkbox"><span></span>
+                </label>
+                <label class="checkbox field-half">Косметолог
+                  <input type="checkbox"><span></span>
+                </label>
+                <label class="checkbox field-half">Физическое лицо
+                  <input type="checkbox"><span></span>
+                </label>
+                <label class="checkbox field-half">Клиника
+                  <input type="checkbox"><span></span>
+                </label>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="content-sidebar-area">
-        <div class="cabinet-sidebar">
-          <h2> <span>Управление</span><i></i></h2>
-          <div class="cabinet-sidebar-container"> 
-            <h3>Головной офис </h3>
-            <ul class="ln">
-              <li><a href="#"> <span> Основная информация</span><span>01</span></a></li>
-              <li><a href="#"> <span> Контактная информация</span><span>02</span></a></li>
-              <li><a href="#"> <span> Детальное описание</span><span>03</span></a></li>
-              <li><a href="#"> <span> Прайс - лист</span><span>04</span></a></li>
-              <li><a href="#"> <span> Примеры работ</span><span>05</span></a></li>
-              <li><a href="#"> <span> Сотрудники</span><span>06</span></a></li>
-              <li><a href="#"> <span> Акции</span><span>07</span></a></li>
-              <li><a href="#"> <span> Новости</span><span>08</span></a></li>
-            </ul>
+          <div class="cabinet-line">
+            <div class="cabinet-num">02 </div>
+            <div class="cabinet-fill">
+              <h3> <em>Информация</em></h3>
+              <div class="cabinet-filed checkbox-grid">
+                <input type="text" placeholder="| Наименование компании">
+                <input type="text" placeholder="| Фамилия">
+                <input class="field-half" type="text" placeholder="| Имя">
+                <input class="field-half" type="text" placeholder="| Отчество">
+                <input class="field-half" type="text" placeholder="| +7 (___) ___ - __ - __">
+                <input class="field-half" type="text" placeholder="| Email">
+                <input class="input-file" type="file" data-multy="0" data-textchoise="Выберете файл..." data-hint="Загрузите фото лицензии/сертификата на продукцию (для фото - формат: .jpg, .png; размер - не более 500 кб)">
+                <input type="text" placeholder="| Введите ваш пригласительный код">
+                <input class="input-file" type="file" data-multy="1" data-textchoise="Выберете фотографию" data-hint="Загрузите фото лицензии/сертификата на продукцию (для фото - формат: .jpg, .png; размер - не более 500 кб)">
+              </div>
+            </div>
           </div>
-        </div>
+          <div class="cabinet-line">
+            <div class="cabinet-num">03</div>
+            <div class="cabinet-fill">
+              <h3> <em>Придумайте пароль</em></h3>
+              <div class="cabinet-filed checkbox-grid">
+                <input type="text" placeholder="| Придумайте пароль для входа на сайт *">
+                <input type="text" placeholder="| Подтвердите пароль для входа на сайт *">
+                <label class="checkbox checkbox-micro">Нажимая кнопку «Регистрация», я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в Согласии на обработку персональных данных
+                  <input type="checkbox"><span></span>
+                </label>
+                <p>Даю согласие на получение уведомлений в форме новостной рассылки об акциях и скидках от:</p>
+                <label class="checkbox field-half">Частных косметологов
+                  <input type="checkbox"><span></span>
+                </label>
+                <label class="checkbox field-half">Салонов / Клиник
+                  <input type="checkbox"><span></span>
+                </label>
+                <label class="checkbox field-half">Производителей / Дистрибьюторов
+                  <input type="checkbox"><span></span>
+                </label>
+              </div>
+              <div class="btn-group">
+                <input class="btn" type="submit" value="Регистрация">
+              </div>
+            </div>
+          </div>
+        </form>
+        <!-- login-page end-->
+        <!-- footer-->
+        <!-- footer-->
       </div>
     </div>
-    <!-- cabinet-page end-->
-    <!-- footer-->
-    <!-- footer-->
   </body>
 </html>
