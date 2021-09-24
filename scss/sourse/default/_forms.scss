@@ -78,12 +78,19 @@ $heightContainerFile: 20px;
 .notice-file {
 	position: absolute;
 	right: 0;
-
+	top: 0;
+	display: none;
 
 	i {
 		@include icoEl(30px, 30px, "../images/icons/danger-sign-black.svg");
 		margin-left: 15px;
 	}
+}
+
+.hint-input-file {
+	color: $grayColor;
+	margin: 0 0 15px;
+	border-top: 1px solid;
 }
 
 /*-file-upload-*/

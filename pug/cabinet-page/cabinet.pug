@@ -1,48 +1,7 @@
 .content-grid.main-grid
-  .content-head-area
-    .btn-group
-      a.back-btn(href="#")
-        i 
-        span Вернуться
-    .breadcrumbs
-      a(href="#") Главная
-  .content-body-area
-    .cabinet-head
-      h1 Кабинет
-      .btn-group 
-        a.btn(href="#") Профиль
+  +content-roof-area("Главная/ Личный Кабинет")
+  .content-main-area
+    +content-head("Кабинет", "cabinet")
     .cabinet-body
-      .cabinet-line
-        .cabinet-num 01
-        .cabinet-fill
-          h3 
-            em Наименование вашего салона
-            span *
-          .cabinet-filed
-            form.form
-              input(type="text" placeholder="| Введите наименование вашего салона или сети салонов ")
-          .cabinet-filed
-            form.form 
-            input.input-file(type="file")
-          .cabinet-filed
-            form.form 
-            select.style-select
-              each val in ["one","two","three","four","five","six","sevent","eight","nine","ten"]
-                option 
-                  = val
-  .content-sidebar-area
-    .cabinet-sidebar
-      h2 
-        span Управление
-        i
-      .cabinet-sidebar-container 
-        h3 Головной офис 
-        ul.ln
-          each val,index in ["Основная информация","Контактная информация","Детальное описание","Прайс - лист","Примеры работ","Сотрудники","Акции","Новости"]
-            li
-              a(href="#") 
-                span 
-                  = val
-                span
-                  |0
-                  = index + 1
+      include salon/page-1.pug
+  +sidebar-cabinet(navCabinet)

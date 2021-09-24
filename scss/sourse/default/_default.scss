@@ -125,7 +125,7 @@ $gridCount: 12;
 	}
 }
 
-.content-head-area {
+.content-roof-area {
 	grid-column: span 12;
 	display: flex;
 	justify-content: space-between;
@@ -149,7 +149,13 @@ $gridCount: 12;
 	display: inline-block;
 }
 
-.content-body-area {
+.content-head {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 0 30px;
+}
+
+.content-main-area {
 	grid-column: span 10;
 }
 

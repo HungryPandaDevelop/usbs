@@ -146,20 +146,20 @@ strong {
   height: 30px;
 }
 
-.content-head-area {
+.content-roof-area {
   grid-column: span 12;
   display: flex;
   justify-content: space-between;
   margin: 0 0 30px;
 }
-.content-head-area a {
+.content-roof-area a {
   text-decoration: none;
 }
-.content-head-area a:hover {
+.content-roof-area a:hover {
   color: #303030;
   text-decoration: underline;
 }
-.content-head-area .btn-group {
+.content-roof-area .btn-group {
   display: inline-block;
 }
 
@@ -167,7 +167,13 @@ strong {
   display: inline-block;
 }
 
-.content-body-area {
+.content-head {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 30px;
+}
+
+.content-main-area {
   grid-column: span 10;
 }
 
@@ -343,6 +349,8 @@ input.btn:hover,
 .notice-file {
   position: absolute;
   right: 0;
+  top: 0;
+  display: none;
 }
 .notice-file i {
   display: inline-block;
@@ -354,6 +362,12 @@ input.btn:hover,
   background-size: contain;
   background-image: url("../images/icons/danger-sign-black.svg");
   margin-left: 15px;
+}
+
+.hint-input-file {
+  color: #686868;
+  margin: 0 0 15px;
+  border-top: 1px solid;
 }
 
 /*-file-upload-*/
@@ -1376,12 +1390,6 @@ nav li a {
 }
 
 /*.cabinet-sidebar end*/
-.cabinet-head {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 0 30px;
-}
-
 .cabinet-fill {
   grid-column: span 10;
 }
@@ -1426,3 +1434,51 @@ nav li a {
 
 /*authorization*/
 /*--------------------cabinet-page-end----*/
+/*--------------------worker-start----*/
+.worker-detail-main {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 30px;
+  margin: 0 0 30px;
+}
+
+.worker-detail-img {
+  grid-column: span 3;
+}
+.worker-detail-img img {
+  width: 100%;
+}
+
+.worker-detail-info {
+  grid-column: span 9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.worker-detail-info h3 {
+  font-size: 42px;
+  margin: 0 0 15px;
+}
+.worker-detail-info h4 {
+  font-size: 23px;
+  text-transform: uppercase;
+  font-family: "regular";
+}
+.worker-detail-info .info-container {
+  margin: auto 0;
+}
+.worker-detail-info .worker-detail-phone a {
+  font-size: 23px;
+  color: #303030;
+  text-decoration: none;
+}
+.worker-detail-info .worker-detail-phone a:hover {
+  color: #76c100;
+}
+
+.worker-detail-description h3 {
+  font-size: 23px;
+  margin: 0 0 15px;
+}
+
+/*--------------------worker-end----*/

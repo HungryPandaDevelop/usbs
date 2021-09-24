@@ -1,0 +1,33 @@
+//----------------------------------------------------------
+mixin content-roof-area(breadcrumbs)
+  .content-roof-area
+    .btn-group
+      a.back-btn(href="#")
+        i 
+        span Вернуться
+    .breadcrumbs
+      a(href="#")= breadcrumbs
+mixin content-head(title, type)
+  .content-head
+    h1= title
+    if type == "cabinet"
+      .btn-group 
+        a.btn(href="#") Профиль
+//----------------------------------------------------------
+mixin sidebar-cabinet(massEl)
+  .content-sidebar-area
+    .cabinet-sidebar
+      h2 
+        span Управление
+        i
+      .cabinet-sidebar-container 
+        h3 Головной офис 
+        ul.ln
+          each val,index in massEl
+            li
+              a(href="#") 
+                span 
+                  = val
+                span
+                  |0
+                  = index + 1
