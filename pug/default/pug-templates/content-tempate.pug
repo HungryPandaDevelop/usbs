@@ -7,12 +7,19 @@ mixin content-roof-area(breadcrumbs)
         span Вернуться
     .breadcrumbs
       a(href="#")= breadcrumbs
+//----------------------------------------------------------
 mixin content-head(title, type)
-  .content-head
+  .content-head.content-grid
     h1= title
     if type == "cabinet"
       .btn-group 
         a.btn(href="#") Профиль
+    if type == "salon"
+      .content-head-container
+        .btn-group 
+          a.btn(href="#") Метро, район
+        .salon-count
+          | Всего: 52
 //----------------------------------------------------------
 mixin sidebar-cabinet(massEl)
   .content-sidebar-area
@@ -46,4 +53,7 @@ mixin banner-cabinet(img, title, secondTitlem, text, btnText )
         = text
         .btn-container
           a.btn(href="#")
-            = btnText 
+            = btnText
+//--salone-item-template start
+include salon-item-template.pug 
+//--salone-item-template end

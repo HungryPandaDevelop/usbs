@@ -1,0 +1,11 @@
+.main-grid
+  +content-roof-area("Главная/ Салоны")
+  .content-main-area
+    +content-head("Cалоны", "salon")
+    // metro-filter start
+    include ../content-parts/metro-search.pug
+    // metro-filter end 
+    include ../content-parts/filters-head.pug
+    .content-body.content-grid
+      - for (var x = 0; x < 20; x++)
+        +salon-item("../images/temp/salon-1.jpg","Салон красоты 'Egoist&Ka'","«Блайс» — ультрамодный салон красоты премиум-класса","Островитянова,19/22")

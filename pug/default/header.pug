@@ -7,13 +7,13 @@ include mobile-menu.pug
 include popup-form.pug
 // popup-form 
 
-header
-  .main-grid
+header.header-black
+  .main-grid.first-line
     .hamburger-container.vertical-align 
       a(href="#").hamburger-btn
     .logo-container.vertical-align 
       a.logo(href="#") 
-        img(src="../images/logo.png", alt="")
+        img(src="../images/logo.svg", alt="")
     .sigin-container.vertical-align 
       .sigin-body
         a(href="#") Войти
@@ -37,7 +37,7 @@ header
         .loop-btn
         .basket-btn
     hr
-  .main-grid
+  .main-grid.second-line
     nav.nav.nav-1
       ul
         each val in ["Товары","Услуги"]
