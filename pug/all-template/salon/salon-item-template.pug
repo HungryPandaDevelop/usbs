@@ -1,9 +1,9 @@
 mixin salon-item(img, title, description, addres, offer )
-  .salon-item.list-item
+  .salon-item.type-item
     h3 
       = title
     .item-grade
-      b 0 отзывов
+      b 1 отзывов
       .stars-container 
         - for (var x = 0; x < 5; x++)
           i
@@ -13,6 +13,6 @@ mixin salon-item(img, title, description, addres, offer )
       = addres
     .salon-list-img
       img(src=img, alt="")
-      .list-offer
+      .type-offer
         em
         span Новинка
