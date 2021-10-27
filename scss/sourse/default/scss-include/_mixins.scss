@@ -66,3 +66,22 @@ $points: 1920,
   }
 
 }
+
+@mixin response {
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}
+
+$size: 414px;
+$block: comments-all;
+
+@include response {
+
+  /*---#{$block start}---*/
+  .box2 {
+    background: red;
+  }
+
+  /*---#{$block end}---*/
+}

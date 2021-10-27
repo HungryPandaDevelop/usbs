@@ -45,11 +45,23 @@
     justify-content: space-between;
   }
 
-  .salon-count {
+  .salon-count,
+  .review-detail-count {
     font-size: $largeSize;
     color: $blackColor;
     font-family: "bold";
     line-height: 1;
+  }
+
+  .review-detail-count {
+    span {
+      vertical-align: top;
+    }
+
+    i {
+      @include icoEl(30px, 30px, "../images/icons/star-black.svg", top);
+      margin-left: 15px;
+    }
   }
 }
 
@@ -59,58 +71,44 @@
 
 .content-sidebar-area {
   grid-column: span 2;
-}
 
-/*filter*/
-.filter-head {
-  border-top: 1px solid $grayColor;
-  padding: 30px 0;
-
-  b {
-    color: $blackColor;
-    margin-right: 15px;
-  }
-
-  a {
-    text-decoration: none;
-    margin: 0 15px;
-
-    &:hover,
-    &.active {
-      color: $blackColor;
-      text-decoration: underline;
-    }
-  }
-
-  .filter-half {
-    grid-column: span 5;
-  }
-
-  .filter-half-second {
+  h2 {
+    font-size: $largeSize;
     text-align: right;
+    padding-bottom: 15px;
+  }
+}
 
-    a:last-child {
-      margin-right: 0;
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+
+  h2 {
+    font-size: $largeSize;
+  }
+
+  .btn-container {
+    display: flex;
+
+    a {
+      margin: auto 0;
+      text-decoration: none;
+
+      i {
+        margin-left: 8px;
+        @include icoEl(15px, 15px, "../images/controls/arrow-next-gray.svg", sub);
+
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
 
-/*filter*/
-
-/*metro search*/
-.metro-search {
-  background-color: $blackColor;
-  color: $whiteColor;
-  padding: 15px;
-
-  input:not(.btn) {
-    color: $whiteColor;
-    border-color: $whiteColor;
-
-    &::placeholder {
-      color: $grayColor;
-    }
-  }
+.content-detail {
+  grid-column: span 12;
 }
-
-/*metro search*/

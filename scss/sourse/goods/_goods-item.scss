@@ -10,8 +10,10 @@
   }
 
 
+  .goods-buy {
+    margin: 0 -15px 30px;
+  }
 }
-
 
 .goods-list-img {
   position: relative;
@@ -38,7 +40,7 @@
   background-color: $grayColorSecond;
   display: flex;
   justify-content: space-between;
-  margin: 0 -15px 30px;
+
 
   .goods-controls {
     justify-content: space-between;
@@ -78,58 +80,3 @@
     font-size: $smallSize;
   }
 }
-
-/*list-item*/
-
-.list-item {
-  &:hover {
-    .list-offer {
-      span {
-        left: 0;
-      }
-    }
-  }
-}
-
-.list-offer {
-  position: absolute;
-  right: 0;
-  top: 0;
-  overflow: hidden;
-
-  span {
-    display: block;
-    left: 100%;
-    position: relative;
-    padding: 5px 10px;
-    color: $whiteColor;
-    background-color: $blueColor;
-    transition: ease-out 0.25s;
-  }
-
-  em {
-    @include positionElement(0, 0, 0, 0, right);
-    border-style: solid;
-    border-width: 14px;
-    border-color: $blueColor $blueColor transparent transparent;
-  }
-}
-
-/*list-item*/
-
-/*item-grade / товары / акции / салоны / косметологи*/
-.item-grade {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 0 15px;
-  color: $blackColor;
-}
-
-.stars-container {
-  i {
-    @include icoEl(12px, 12px, "../images/icons/star-gray.svg");
-    margin: 0 2px;
-  }
-}
-
-/*item-grade*/

@@ -20,6 +20,19 @@ input.btn,
     border-color: $greenColor;
   }
 
+  &.white-border {
+    border-color: $whiteColor;
+    color: $whiteColor;
+
+    &:hover {
+      border-color: $greenColor;
+    }
+
+  }
+
+  &.max-none {
+    max-width: none;
+  }
 }
 
 .back-btn {
@@ -33,10 +46,10 @@ input.btn,
 
 /*pagination page start*/
 
-.pagination-page {
+.pagination {
   grid-column: span 16;
   text-align: center;
-  margin: 0 0 45px;
+  margin: 60px 0 45px;
   position: relative;
   z-index: 2;
 
@@ -44,43 +57,50 @@ input.btn,
     width: 30px;
     height: 30px;
     border-radius: 100%;
-    background-color: $orangeColor;
-    color: $whiteColor;
+
     text-align: center;
     text-decoration: none;
     line-height: 27px;
-    border: 1px solid $orangeColor;
+    border: 1px solid $blackColor;
     vertical-align: middle;
     margin: 0 15px;
 
     &:hover {
-      color: $orangeColor;
-      background-color: $whiteColor;
+      color: $whiteColor;
+      background-color: $blackColor;
     }
   }
 
 
 
-  .prev-page {
-    @include icoEl(45px, 45px, "../images/controls/prev.svg");
+  .pagination-prev {
+    @include icoEl(30px, 30px, "../images/controls/arrow-left-mini-gray.svg");
+
+    &:hover {
+      background-image: url("/images/controls/arrow-left-mini-white.svg");
+    }
   }
 
-  .next-page {
-    @include icoEl(45px, 45px, "../images/controls/next.svg");
+  .pagination-next {
+    @include icoEl(30px, 30px, "../images/controls/arrow-right-mini-gray.svg");
+
+    &:hover {
+      background-image: url("/images/controls/arrow-right-mini-white.svg");
+    }
   }
 
-  .prev-page,
-  .next-page,
-  .dotted {
+  .pagination-prev,
+  .pagination-next {
+    background-size: 50%;
+  }
+
+  .pagination-prev,
+  .pagination-next,
+  .pagination-dotted {
     background-color: initial;
     color: inherit;
-    border: 0;
   }
 
-  .prev-page,
-  .next-page {
-    margin: 0 70px;
-  }
 }
 
 /*pagination page end*/
